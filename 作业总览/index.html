@@ -11,20 +11,47 @@
 			padding: 0;
 		}
 		
-		html {
-			background: url(img/72f082025aafa40ff725dc67a564034f79f019ac.jpg) no-repeat center center fixed;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
+		video {
+			position: fixed;
+			right: 0px;
+			bottom: 0px;
+			min-width: 100%;
+			min-height: 100%;
+			height: auto;
+			width: auto;
+			z-index: -11
+		}
+		
+		source {
+			min-width: 100%;
+			min-height: 100%;
+			height: auto;
+			width: auto;
 		}
 		
 		.y {
 			visibility: hidden;
 		}
+		a{
+			text-decoration: none;
+			width: 300px;
+			height: 50px;
+			margin: 0 auto;
+		}
+		a:visited{
+			color: coral;
+		}
+		a:hover{
+			color: black;
+			background-color: antiquewhite;
+		}
+
 	</style>
 
 	<body>
+		<video autoplay="autoplay" loop="loop" muted="muted">
+			<source src="js/1569665502fe5e18f12b792f54.mp4_last.mp4" type="video/mp4"></source>
+		</video>
 		<audio src="js/Jusqu'à Grand-Père - 夢桜.mp3" autoplay="autoplay" loop="loop" controls="controls" class="y"></audio>
 		<a href="https://wananjj.github.io/homework1/" style="display: block;text-align:center ;">
 			<font face="楷体" size="7" color="coral">初醒之雾</font>
@@ -39,7 +66,7 @@
 		</a>
 		<br />
 		<a href="https://wananjj.github.io/homework4" style="display: block;text-align:center ;">
-			<font face="楷体" size="7" color="coral">肆式青春</font>
+			<font face="楷体" size="7" color="coral">似水流年</font>
 		</a>
 
 </html>
