@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		video {
+			position: fixed;
+			right: 0px;
+			bottom: 0px;
+			min-width: 100%;
+			min-height: 100%;
+			height: auto;
+			width: auto;
+			z-index: -11
+		}
+		
+		source {
+			min-width: 100%;
+			min-height: 100%;
+			height: auto;
+			width: auto;
+		}
+		.daohang {
+			width: 700px;
+			height: 50px;
+			opacity: 0.9;
+			position: fixed;
+			left: 30%;
+		}
+		
+		.daohangtiao {
+			width: 114px;
+			height: 49.98px;
+			background-color: #6495ED;
+			border: solid #87CEFA 2px;
+			transform: skew(-10deg);
+			display: inline-block;
+			border-radius: 12%;
+			transition: border-color 0.5s;
+			padding-bottom: 11px;
+		}
+		
+		.daohangtiao:hover {
+			border-color: coral;
+		}
+		
+		.neirong {
+			transform: skew(10deg);
+			text-align: center;
+			color: white;
+			font-family: "黑体";
+		}
+		
+		#d1 {
+			background-color: #87CEFA;
+		}
+		
+		#d11 {
+			color: black;
+		}
+		
+		a {
+			text-decoration: none;
+			color: white;
+			font-family: "微软雅黑";
+		}
+		.content{
+			width: 900px;
+			height: 1500px;
+			overflow: hidden;
+			transform: translate(38%,100px);
+		}
+		.content:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.zuo{
+			width: 200px;
+			height: 220px;
+			background-color: #000000;
+			float: left;
+			text-align: center;
+			margin: 10px 10px 10px 10px;
+			animation: donghua 1.5s;
+			border-radius: 10%;
+			transition: all 0.5s;
+			border: solid 2px white;
+		}
+		.zi{
+			width: 880px;
+			transform: translate(38%,70px);
+			font-family: "微软雅黑";
+			overflow: hidden;
+			color: white;
+		}
+		#z1{
+			font-size: xx-large;
+		    transform: translate(300px) skew(-20deg);
+		}
+		#z2{
+			font-size: xx-large;
+			transform: translate(400px) skew(15deg);
+		}
+		@keyframes donghua{
+			25%{
+				transform: scale(1.1);
+			}
+			50%{
+				transform: scale(1.11);
+			}
+			70%{
+				transform: skew(10deg);
+			}
+			85%{
+				transform: skew(-10deg);
+			}
+		}
+		.zuo:hover{
+			transform: scale(1.1);
+		}
+		.zuokuan{
+			width: 880px;
+			height: 438px;
+			background-color: black;
+			animation: donghua2 20s;
+			animation-iteration-count: 1;
+			border-radius: 5%;
+			animation-fill-mode: forwards;
+			border: solid 2px white;
+		}
+		@keyframes donghua2{
+			0%{transform: translate(850px,300px);}
+			100%{transform: translate(0px,100px);}
+		}
+		.y{
+			visibility: hidden;
+		}
+	</style>
+	<body>
+		<video id="v1" autoplay="autoplay" loop="loop" muted="muted">
+			<source src="js/15706764321dfafa3ae4d372d6.mp4" type="video/mp4"></source>
+		</video>
+			<div class="daohang">
+				<a href="https://wananjj.github.io/homework5">
+					<div class="daohangtiao">
+						<div class="neirong">
+							<h3>首页</h3>
+						</div>
+					</div>
+				</a>
+				<a href="https://wananjj.github.io/homework5(1)" target="_blank">
+					<div class="daohangtiao" >
+						<div class="neirong" >
+							<h3>钢琴</h3>
+						</div>
+					</div>
+				</a>
+				<a href="https://wananjj.github.io/homework5(2)" target="_blank">
+					<div class="daohangtiao"id="d1">
+						<div class="neirong"id="d11">
+							<h3>文艺</h3>
+						</div>
+					</div>
+				</a>
+				<a href="https://www.bilibili.com/anime/?spm_id_from=333.334.b_7072696d6172795f6d656e75.8" target="_blank">
+					<div class="daohangtiao">
+						<div class="neirong">
+							<h3>动漫</h3>
+						</div>
+					</div>
+				</a>
+				<a href="https://www.bh3.com/valkyria.html" target="_blank">
+					<div class="daohangtiao">
+						<div class="neirong">
+							<h3>说明</h3>
+						</div>
+					</div>
+				</a>
+			</div>
+	
+	         <div class="zi">
+	     	   <h1 id="z1">桃之夭夭</h1>
+	     	   <h2 id="z2">灼灼其华</h2>
+	         </div>
+	
+			<div class="content">
+				<img src="img/QQ图片20191030221353.png" class="zuo" />
+				<img src="img/QQ图片20191030221526.png" class="zuo" />
+				<img src="img/QQ图片20191030221718.png" class="zuo" />
+				<img src="img/QQ图片20191030222007.png" class="zuo" />
+				<img src="img/QQ图片20191030222231.png" class="zuo" />
+				<img src="img/QQ图片20191030222356.png" class="zuo" />
+				<img src="img/QQ图片20191030222801.png" class="zuo" />
+				<img src="img/QQ图片20191030223022.png" class="zuo" />
+				<img src="img/QQ图片20191030223415.png" class="zuokuan" />
+
+			</div>	
+			<audio autoplay="autoplay" controls="controls" loop="loop" src="css/HOYO-MiX - Rebirth.mp3" class="y"></audio>
+			
+			
+	</body>
+</html>
