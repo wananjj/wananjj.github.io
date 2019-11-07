@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>腾讯首页</title>
+	</head>
+	<style>
+		body {
+			margin: 0;
+		}
+		
+		.all {
+			width: 1400px;
+			height: 1080px;
+			margin: 0 auto;
+		}
+		
+		.tou {
+			height: 80px;
+		}
+		
+		.daohang {
+			height: 80px;
+		}
+		
+		.guanggao {
+			height: 920px;
+		}
+		
+		.guang1 {
+			width: 920px;
+			height: 920px;
+			display: inline-block;
+			margin-right: 35px;
+		}
+		
+		.guang2 {
+			width: 440px;
+			height: 920px;
+			display: inline-block;
+			float: right;
+		}
+		
+		.nei1 {
+			width: 440px;
+			height: 845px;
+			display: inline-block;
+			margin-right: 35px;
+		}
+		
+		.nei2 {
+			height: 845px;
+			width: 440px;
+			display: inline-block;
+		}
+		
+		.tu1 {
+			width: 920px;
+			height: 75px;
+			background-color: antiquewhite;
+		}
+		
+		.tu2 {
+			width: 440px;
+			height: 75px;
+			background-color: #FAEBD7;
+		}
+		
+		.c1 {
+			margin-top: 25px;
+			height: 51px;
+			border-bottom: solid 1px #60a5e4;
+		}
+		
+		.c2 {
+			width: 439px;
+			height: 40px;
+			background-color: cornflowerblue;
+		}
+		
+		#c22 {
+			margin-top: 25px;
+		}
+		
+		li {
+			display: inline-block;
+			width: 82.35px;
+			height: 50px;
+			text-decoration: none;
+			float: left;
+			background-color: #1479d7;
+			text-align: center;
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.d {
+			margin-top: 15px;
+			text-align: center;
+			width: 62.35px;
+			text-decoration: none;
+			color: white;
+			display: inline-block;
+			font-size: large;
+		}
+		
+		.d:hover {
+			color: #1479d7;
+			background-color: aliceblue;
+		}
+		
+		.sousuo {
+			margin-left: 250px;
+			width: 560px;
+			height: 50px;
+			position: relative;
+			transform: translateY(-15px);
+			display: inline-block;
+		}
+		
+		.sousuo:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		
+		.wang {
+			width: 93.52px;
+			height: 52px;
+			background-color: #F0F0F0;
+			float: left;
+			border-radius: 20px 0 0 20px;
+			text-align: center;
+			border: solid 1px #A9A9A9;
+			border-right: none;
+		}
+		
+		.sousuokuang {
+			width: 340px;
+			height: 50px;
+			background-color: #F0F0F0;
+			float: left;
+			border: solid 1px #A9A9A9;
+			border-left: none;
+			
+		}
+		
+		.sousuoniu {
+			width: 119px;
+			height: 50px;
+			background-color: #1479d7;
+			float: left;
+			border-radius: 20px;
+			text-align: center;
+		}
+		
+		.z {
+			color: white;
+			position: relative;
+			transform: translateY(-5px);
+		}
+		
+		.z1 {
+			margin-top: 15px;
+			height: 30px;
+			color: black;
+			position: relative;
+			text-align: center;
+			font-weight: 400;
+			font-size: large;
+		}
+		
+		#l1 {
+			background-color: white;
+		}
+		
+		.z2 {
+			display: none;
+		}
+		
+		.z1:hover .z2 {
+			display: block;
+		}
+		
+		#l1 {
+			color: darkgrey;
+		}
+		
+		#l1:hover {
+			color: black;
+			border-bottom: coral solid 3px;
+		}
+		
+		.tubiao {
+			margin-top: 15px;
+			float: right;
+			height: 40px;
+			width: 120px;
+		}
+		
+		.t1 {
+			width: 35px;
+			height: 40px;
+		}
+		
+		.t2 {
+			width: 35px;
+			height: 40px;
+		}
+		
+		.t1:hover {
+			background: url(img/k2.png);
+			position: relative;
+		}
+		
+		.t2 {
+			background: url(img/y2.png);
+			position: relative;
+		}
+		
+		.denglu {
+			width: 37px;
+			height: 37px;
+			background-color: #F0F0F0;
+			float: right;
+			margin-bottom: 1px;
+			border: solid #F0F0F0 1px;
+			text-align: center;
+		}
+		
+		.denglu:hover {
+			border: #60a5e4 solid 1px;
+		}
+		
+		.z3 {
+			position: relative;
+			font-weight: 300;
+			transform: translateY(-14px);
+		}
+		
+		.yaowen {
+			width: 60px;
+			height: 44px;
+			float: left;
+			text-align: center;
+			text-decoration: none;
+			border-bottom: solid white 6px;
+			border-right: 1px solid #F0F0F0;
+		}
+		
+		.xinwen {
+			width: 80px;
+			height: 44px;
+			float: left;
+			text-align: center;
+			text-decoration: none;
+			border-bottom: solid white 6px;
+		}
+		
+		.z5 {
+			color: #000000;
+			font-weight: 500;
+			position: relative;
+			transform: translateY(-10px);
+		}
+		
+		#z4 {
+			color: #000000;
+			font-weight: 500;
+			position: relative;
+			transform: translateY(-10px);
+		}
+		
+		.xinwen:hover {
+			border-bottom: #60a5e4 solid 6px;
+		}
+		
+		.yaowen:hover {
+			border-bottom: #60a5e4 solid 6px;
+		}
+		
+		.z5:hover {
+			color: #1479d7;
+		}
+		
+		.contentall {
+			width: 440px;
+			height: 770px;
+			float: left;
+		}
+		
+		#content1 {
+			position: absolute;
+			width: 440px;
+			height: 770px;
+			float: left;
+			background-color: white;
+		}
+		
+		#content2 {
+			position: absolute;
+			width: 440px;
+			height: 770px;
+			background-color: white;
+		}
+		
+		#x1 {
+			border-bottom: solid 6px #60a5e4;
+		}
+		
+		#z4 {
+			color: #1479d7;
+		}
+		
+		#z5 {
+			font-weight: 800px;
+		}
+		
+		.conteng3 {
+			width: 440px;
+			height: 770px;
+			float: left;
+		}
+		
+		.miaoshu {
+			width: 440px;
+			height: 146px;
+		}
+		
+		p {
+			margin-top: 10px;
+		}
+	</style>
+
+	<body onload="init()">
+		<div class="all">
+			<div class="tou">
+				<a href="#"><img src="img/QQ图片20191106211237.png" </a>
+					<div class="sousuo">
+						<div class="wang">
+							<ul class="z1">网页
+								<ul class="z2">
+									<li id="l1">网页</li>
+									<li id="l1">图片</li>
+									<li id="l1">视频</li>
+									<li id="l1">音乐</li>
+									<li id="l1">地图</li>
+									<li id="l1">问问</li>
+									<li id="l1">百科</li>
+									<li id="l1">新闻</li>
+									<li id="l1">购物</li>
+								</ul>
+							</ul>
+						</div>
+						<input type="text" class="sousuokuang" />
+						<div class="sousuoniu">
+							<h3 class="z">搜狗搜索</h3>
+						</div>
+					</div>
+					<div class="tubiao">
+						<img src="img/k1.png" class="t1" />
+						<img src="img/y1.png" class="t2" />
+						<div class="denglu">
+							<h6 class="z3"><font color="#60a5e4">登录</font></h6>
+						</div>
+					</div>
+			</div>
+			<div class="daohang">
+				<ul>
+					<li class="daohangtiao">
+						<a href="#" class="d">新闻</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">视频</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">图片</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">军事</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">体育</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">NBA</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">娱乐</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">财经</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">科技</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">时尚</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">汽车</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">房产</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">教育</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">文化</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">游戏</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">星座</a>
+					</li>
+					<li class="daohangtiao">
+						<a href="#" class="d">更多</a>
+					</li>
+				</ul>
+			</div>
+			<div class="guanggao">
+				<div class="guang1">
+					<a href="#"><img src="img/QQ图片20191106212505.png" class="tu1" /></a>
+					<div class="nei1">
+						<div class="c1">
+							<a class="yaowen" href="#" onmouseover="changes('content1')">
+								<h3 class="z5">要闻</h3></a>
+							<a class="xinwen" href="#" onmouseover="changes('content2')">
+								<h3 class="z5">湖南新闻</h3></a>
+
+							<div class="contentall">
+								<div id="content1">
+									<a>
+										<h3 id="z5">习近平举行仪式欢迎法国总统访华</h2></a>
+									<a><h4>习近平夫妇会见马克龙夫妇 习近平马克龙出席中法峰会闭幕式</h4></a>
+									<h4 style="font-weight: 400;">习近平将访问希腊并赴巴西出席金砖国家领导人第十一次会晤</h3>
+										<h4 style="font-weight: 400;">&nbsp&nbsp&nbsp&nbsp&nbsp韩正会见香港特别行政区行政长官林郑月娥</h3>
+									<h4 style="font-weight: 400;">人民日报评论员：大江大河奔腾向前的势头谁也阻挡不了</h3>
+								    <h4 style="font-weight: 400;">以制度型开放优化营商环境 理上网来</h3>
+								    <h4 style="font-weight: 400;">取消已加征关税是达成协议的必要条件 火焰蓝一周年</h3>
+								    <a href="#"><img src="img/QQ图片20191107105952.png"style="float: left; margin-right: 10px;" /></a>
+								    <p>给6万吨“钢铁巨兽”洗澡：首艘国产航母开始进行舰体清洁</p>
+								</div>
+								<div id="content2">
+									<h3>湖南：五大类61个项目拟获中央预算内投资</h3>
+									<h4 style="font-weight: 400;">长沙不动产便民服务添新举措 抵押登记“一网通办”</h3>
+								    <h4 style="font-weight: 400;">怕被坑？这份长沙养老机构信息表值得收藏</h3>
+								    <h4 style="font-weight: 400;">戴好口罩！重污染天气突袭长沙</h3>
+									<h4 style="font-weight: 400;">湖南快递工程技术人才可评职称</h3>
+									<h4 style="font-weight: 400;">首家湘籍企业在香港成功上市</h3>
+									<h4 style="font-weight: 400;">“网络大V”看湖南营商环境 衡阳 | 省域副中心 产业新衡阳</h3>
+									<h4 style="font-weight: 400;">征集令！2019湖南消防文创作品中小学设计大赛开始征稿</h3>
+									<div class="miaoshu">
+									<a href="#"><img src="img/QQ图片20191107101628.png" style="float: left; margin-right: 10px;"/></a>
+									<p>怀化一辆货车发生侧翻 司机动不了车门还被反锁</p>
+									</div>
+								</div>
+								<script>
+								var es = 1;
+								function changes(ts) {
+									var obj = document.getElementById(ts);
+									obj.style.zIndex = es;
+									es++;
+								}
+							</script>
+							</div>
+						</div>
+					</div>
+					<div class="nei2">
+						<div class="c1">
+							<a class="xinwen" href="#" id="x1"><h3 id="z4">今日话题</h3></a>
+							<div class="conteng3">
+								<h3>第二届进博会，亮点有这些</h3>
+								<h4 style="font-weight: 400;">中青评论| “代经济”流行真的是年轻人越来越懒吗？</h3>
+							    <h4 style="font-weight: 400;">新京报评论| 网络时代，老师“入户家访”out了吗？</h3>
+								<h4 style="font-weight: 400;">棱镜| 创投2019怪状：募资太难，回报大涨，科创板发力</h3>
+								<h4 style="font-weight: 400;">深网| 法律逐渐出台，但电商"二选一"为何仍难退出舞台？</h3>
+								<h4 style="font-weight: 400;">谷雨| 汉服成街服的背后：一件价格上万，山寨成风</h3>
+								<h4 style="font-weight: 400;">腾讯大家| 苹果的加入，将掀起美国视频内容的大乱战</h3>
+								<a href="#"><img src="img/QQ图片20191107102614.png" width="440px"/></a>
+								<video poster="img/QQ图片20191107103145.png" width="200px" id="video" onmouseover="videoPlayback()" onmouseout="videoStopped()"
+									style="float: left;"loop="loop">
+									<source type="audio/mp4" src="js/exportedFile.MP4"></source>
+								</video>
+								<p>新海诚又一力作《天气之子》于11月1日震撼上映！</p>
+	<script>
+
+        function videoPlayback()
+        {
+            var video = document.getElementById('video');          
+             video.setAttribute("autoplay","autoplay")
+            video.setAttribute("loop","loop")
+             video.play();
+            }
+        function videoStopped()
+        {
+            var oDiv = document.getElementById('video'); 
+            video.pause();
+        }
+   </script>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="guang2">
+					<a href="#"><img src="img/1.png" class="tu2" id="lunbo" /></a>
+					<script>
+						function init() {
+							setInterval("changeImg()", 3000);
+						}
+						var i = 1;
+
+						function changeImg() {
+							i++
+							document.getElementById("lunbo").src = "img/" + i + ".png";
+							if(i == 3) {
+								i = 0
+							}
+						}
+					</script>
+                   <a href="#"><img src="img/QQ图片20191107111827.png" width="440px" style="margin-top: 20px;"/></a>
+                    <div class="c1">
+                   <a class="xinwen" href="#" id="x1"><h3 id="z4">热门番剧</h3></a>
+                   <h4 style="float: left; margin: 0 auto;position: relative;transform: translateY(10px);color: #3d82f8;font-weight: 500;margin-left: 80px;">11月7日</h4>
+										<h4 style="position: relative;transform: translateY(10px);font-weight: 500;">  上午好，今天有30部热门番剧</h4>
+										<video width="440px" id="video1" onmouseover="videoPlayback1()" onmouseout="videoStopped1()" style="float: left;" loop="loop">
+											<source type="audio/mp4" src="js/IMG_2544.TRIM.MP4"></source>
+										</video>
+										<script>
+											function videoPlayback1() {
+												var video1 = document.getElementById('video1');
+												video1.setAttribute("autoplay", "autoplay")
+												video1.setAttribute("loop", "loop")
+												video1.play();
+											}
+
+											function videoStopped1() {
+												var oDiv = document.getElementById('video1');
+												video1.pause();
+											}
+										</script>
+								</div>
+							</div>
+
+						</div>
+					</div>
+	</body>
+
+</html>
