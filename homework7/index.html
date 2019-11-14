@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+		}
+		.tou{
+			width: 1880px;
+			height: 26px;
+			background-color: #F0F0F0;
+			margin: 0 auto;
+			border: 1px darkgray solid;
+		}
+		.header{
+			width: 1880px;
+			height: 122px;
+			margin: 0 auto;
+			margin-bottom: 30px;
+		}
+		.sousuo{
+			height: 96px;
+			width: 1880px;
+		}
+		.left{
+			margin-left: 200px;
+			height: 26px;
+			width: auto;
+			display: inline-block;
+			margin-right: 400px;
+		}
+		.right{
+			margin-right: 100px;
+			height: 26px;
+			width: auto;
+			display: inline-block;
+		}
+		.touz{
+			display: inline-block;
+			text-decoration: none;
+			color: #ADADAD;
+			font-weight: 300;
+			position: relative;
+			transform: translateY(-5px);
+			margin-right: 30px;
+		}
+        .touz:hover{
+        	text-decoration: underline;
+        	color: red;
+        }
+        .sousuoniu{
+        	position: relative;
+        	background-color: red;
+        	transform: translateY(-26px);
+        	width: 120px;
+        	height: 42px;
+        	border:  red solid 3px;
+        	display: inline-block;
+        	margin: 0;
+        }
+        h3{
+        	font-weight: 300;
+        	font-size: x-large;
+        	margin: 0;
+        	text-align: center;
+        	color: white;
+        }
+        .content{
+        	margin-top: 200px;
+        	width: auto;
+        	height: auto;
+        	margin: 0 auto;
+        }
+        .content:after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        @media only screen and (max-width:800px) 
+		{
+			 .shop{
+			 	margin-top: 20px;
+				margin-left: 20px;
+				margin-right: 40px;
+				margin-bottom: 20px;
+			 	width: 300px;
+			 	height: 400px;
+			 	display: inline-block;
+			 	border: 6px solid white;
+			 	transition: all 0.5s;
+			 }
+		}
+		@media only screen and (min-width: 800px) 
+		{
+			.shop{
+				margin-top: 20px;
+				margin-left: 20px;
+				margin-right: 40px;
+				margin-bottom: 20px;
+			 	width: 300px;
+			 	height: 400px;
+			 	display: inline-block;
+			 	border: solid 6px white;
+			 	transition: all 0.5s;
+			 }
+		}
+		.shop:hover{
+			border: 6px red solid;
+			transform: scale(1.1);
+		}
+		.neizi{
+			color: #ADADAD;
+		}
+		.neizi:hover{
+			color: red;
+		}
+		.xiaoshou{
+			margin: 0;
+			height: 38px;
+		    border: 1px solid #F0F0F0;
+		}
+        h4{
+        	transform: translateY(8px);
+        	font-weight: 200;
+        	color: #A9A9A9;
+        	display: inline-block;
+        }
+        #shuzi{
+        	font-weight: 800;
+        	color: chocolate;
+        }
+        #shuzi1{
+        	font-weight: 800;
+        	color: #38b;
+        }
+	</style>
+	<body>
+		<div class="header">
+		<div class="tou">
+			<div class="left">
+				<a href="#"><img src="img/QQ图片20191113105902.png" /></a>
+				<a href="#" class="touz">天猫首页</a>
+				<a href="#" class="touz">喵，欢迎来到天猫</a>
+				<a href="#" class="touz">请登录</a>
+				<a href="#" class="touz">免费注册</a>
+			</div>
+			<div class="right">
+	            <a href="#" class="touz">我的淘宝</a>
+	            <a href="#"><img src="img/QQ图片20191113200959.png" height="26px"/></a>
+	            <a class="touz">购物车</a>
+	            <a class="touz">收藏夹</a>
+	            <img src="img/QQ图片20191113201403.png" />
+	            <a class="touz">手机版</a>
+	            <a class="touz">淘宝网</a>
+	            <a class="touz">商家支持</a>
+	            <img src="img/QQ图片20191113201552.png" />
+	            <a class="touz">网站导航</a>
+			</div>
+		</div>
+		<div class="sousuo">
+			<a href="#"><img src="img/QQ图片20191113201716.png" style="margin-left: 180px;transform: translateY(10px); margin-right: 30px;"/></a>
+			<input type="text"style="display:inline-block;width: 600px; height: 40px; border: red 3px solid;
+				transform: translateY(-25px); box-shadow: 1px 1px 1px inset black;" />
+			<a href="#"><div class="sousuoniu">
+				<h3>搜索</h3>
+			</div></a>
+			<img src="img/QQ图片20191113203141.png"  style="margin-left: 260px;"/>
+		</div>
+		</div>
+		<div class="content">
+			<div class="shop">
+				<img src="img/QQ图片20191113212354.png" />
+				<br />
+				<a class="neizi">角川书店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+			<div class="shop">
+				<img src="img/QQ图片20191114193141.png" />
+				<br />
+				<a class="neizi">角川书店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+			<div class="shop">
+				<img src="img/QQ图片20191114194250.png" />
+				<br />
+				<a class="neizi">角川书店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+			<div class="shop">
+				<img src="img/QQ图片20191114193150.png" />
+				<br />
+				<a class="neizi">角川书店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+			<div class="shop">
+				<img src="img/QQ图片20191114194507.png" />
+				<br />
+				<a class="neizi">角川书店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+			<div class="shop">
+				<img src="img/QQ图片20191114195339.png" />
+				<br />
+				<a class="neizi">mihoyo旗舰店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+			<div class="shop">
+				<img src="img/QQ图片20191114195342.png" />
+				<br />
+				<a class="neizi">mihoyo旗舰店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+			<div class="shop">
+				<img src="img/QQ图片20191114195352.png" />
+				<br />
+				<a class="neizi">mihoyo旗舰店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+			<div class="shop">
+				<img src="img/QQ图片20191114195354.png" />
+				<br />
+				<a class="neizi">mihoyo旗舰店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+			<div class="shop">
+				<img src="img/QQ图片20191114195357.png" />
+				<br />
+				<a class="neizi">mihoyo旗舰店</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">666笔</h4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">777</h4>
+					<a><img src="img/QQ图片20191114201900.png"  height="39px"  style="float: right;"/></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
