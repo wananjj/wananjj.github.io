@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+<style>
+	a{
+		text-decoration: none;
+		animation: cartoon 2s ;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;	
+	}
+	@keyframes cartoon{
+		25%{color: red;}
+		50%{color: #930000	;}
+		75%{color: #000000	;}
+		100%{color: #2828FF;}
+	}
+</style>
+	<body>
+		<div class="biao" style="margin: 0 auto;width: 480px; height: auto;" >
+		姓名<input type="text" id="xingming" />
+		学号<input type="text" id="xuehao" />
+		<input type="button" value="添加" onclick="add()" />
+		</div>
+		<br />
+		<script>
+			function add() {
+				var x = document.createElement("tr")
+				var a = document.createElement("th")
+				var b = document.createElement("th")
+				var del=document.createElement("th")
+				var tab=document.getElementById('table')
+				tab.appendChild(x)
+				x.appendChild(a)
+				x.appendChild(b)
+				x.appendChild(del)
+				a.innerHTML = document.getElementById('xingming').value
+				b.innerHTML = document.getElementById('xuehao').value
+	            del.innerHTML="<a href='javascript:;' onclick='cancel(this)'>删除</a>"
+			}
+
+			function cancel(obj){
+				var tr=obj.parentNode.parentNode;
+				tr.parentNode.removeChild(tr);
+			}
+		</script>
+		<table border="1" width="300px" id="table"  align="center"   style="border-collapse: collapse; text-align: center;">
+			<tr>
+				<th>姓名</th>
+				<th>学号</th>
+				<th>操作</th>
+			</tr>
+
+			<tr id="fa">
+				<th>梓川</th>
+				<th>001</th>
+				<th>删除</th>
+			</tr>
+			<script>
+			</script>
+		</table>
+	</body>
+
+</html>
