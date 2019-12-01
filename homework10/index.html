@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>食堂菜品</title>
+	</head>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("#s1").fadeIn(100);
+				$("#s2").fadeIn(200);
+				$("#s3").fadeIn(300);
+				$("#s4").fadeIn(400);
+				$("#s5").fadeIn(500);
+				$("#s6").fadeIn(600);
+				$("#s7").fadeIn(700);
+				$("#s8").fadeIn(800);
+				$("#s9").fadeIn(900);
+			});
+		});
+	</script>
+	<style>
+		.tou {
+			width: auto;
+			height: 60px;
+		}
+		
+		.top {
+			margin: 0 auto;
+			width: auto;
+			height: 30px;
+			background-color: gainsboro;
+		}
+		
+		#weic {
+			display: inline-block;
+			width: auto;
+			height: auto;
+		}
+		
+		.page {
+			margin: 0 auto;
+			width: 1230px;
+			height: auto;
+			border: 3px dashed white;
+			color: #E0E0E0;
+			transition: all 2s;
+		}
+		
+		.page:hover {
+			border: dashed 3px red;
+		}
+		
+		ul {
+			list-style: none;
+		}
+		
+		li#city {
+			text-align: center;
+			display: inline-block;
+			width: 80px;
+			border: 1px solid white;
+			transition: all 0.5s;
+		}
+		
+		li#city:hover {
+			background-color: #F0F0F0;
+			color: red;
+			border: #FF0000 1px solid;
+		}
+		
+		p {
+			text-decoration: none;
+			animation: z 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			font-size: -webkit-xxx-large;
+			font-weight: 300;
+		}
+		
+		@keyframes z {
+			10% {
+				color: #FF0000;
+			}
+			20% {
+				color: palevioletred;
+			}
+			30% {
+				color: blueviolet;
+			}
+			40% {
+				color: #4B0091;
+			}
+			50% {
+				color: #4A4AFF;
+			}
+			60% {
+				color: #0066CC;
+			}
+			70% {
+				color: #CAFFFF;
+			}
+			80% {
+				color: #F0F0F0;
+			}
+			90% {
+				color: #FFEEDD;
+			}
+			100% {
+				color: #C7C7E2;
+			}
+		}
+		
+		.rexiao {
+			width: auto;
+			height: 300px;
+			border-bottom: 3px dashed white;
+			transition: border-bottom-color 2s;
+		}
+		
+		.rexiao:hover {
+			border-bottom-color: red;
+		}
+		
+		.neizi {
+			color: #ADADAD;
+		}
+		
+		.neizi:hover {
+			color: red;
+		}
+		
+		.xiaoshou {
+			margin: 0;
+			height: 38px;
+			border: 1px solid #F0F0F0;
+		}
+		
+		h4 {
+			transform: translateY(-15px);
+			font-weight: 200;
+			color: #A9A9A9;
+			display: inline-block;
+		}
+		
+		#shuzi {
+			font-weight: 800;
+			color: chocolate;
+		}
+		
+		#shuzi1 {
+			font-weight: 800;
+			color: #38b;
+		}
+		
+		.shop {
+			width: 400px;
+			height: 300px;
+			display: inline-block;
+			border: dashed 3px white;
+			transition: all 1s;
+			margin-top: 10px;
+		}
+		
+		.shop:hover {
+			border: 3px dashed red;
+			transform: scale(1.05);
+		}
+		.denglu{
+			width: auto;
+			height: 60px;
+			float: right;
+			text-align: center;
+			position: relative;
+			transform: translateY(20px);
+		}
+		#zi{
+			border: 1px solid white;
+			color: #8E8E8E;
+			font-weight: 300;
+			margin-right: 30px;
+			text-decoration: none;
+		}
+		#zi:hover{
+			border: 1px dashed red;
+			color:  red;
+		}
+	</style>
+
+	<body>
+		<div class="tou" id="tou1">
+			<a href="#"><img src="img/图标1.jpg" style="float: left;"></a>
+			<div class="denglu">
+				<a id="zi" href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&redirect_uri=http%3A%2F%2Fspcdp.cdposs.qq.com%2Fauth%2Fcallback&client_id=101477813&state=http%3A%2F%2Fspcdp.cdposs.qq.com%2F">请登录~</a>
+				<a id="zi" href="https://ssl.zc.qq.com/v3/index-chs.html">免费注册</a>
+				<a id="zi" href="">关于我们</a>
+			</div>
+			<a href="https://wananjj.github.io/homework10(4)" class="ui-btn ui-icon-arrow-r ui-btn-icon-left" style="width: 300px; height: auto; float: right;">共享厨房</a>
+		</div>
+		<div class="top" data-role="navbar" data-iconpos="left">
+			<ul>
+				<li>
+					<a href="#" class="ui-btn ui-icon-info ui-btn-icon-left" id="weizhi">位置</a>
+				</li>
+				<li>
+					<a href="#page" data-icon="home">主页</a>
+				</li>
+				<li>
+					<a href="https://wananjj.github.io/homework10(1)" data-icon="search" target="_blank">搜索菜品</a>
+				</li>
+			</ul>
+		</div>
+		<div id="weic">
+			<ul>
+				<li id="city">湖南</li>
+				<li id="city">安徽</li>
+				<li id="city">湖北</li>
+				<li id="city">北京</li>
+				<li id="city">天津</li>
+				<li id="city">重庆</li>
+				<li id="city">山东</li>
+				<li id="city">辽宁</li>
+				<li id="city">昆明</li>
+				<li id="city">海南</li>
+				<li id="city">开发中</li>
+
+			</ul>
+		</div>
+		<script>
+			$(document).ready(function() {
+				$("#weizhi").click(function() {
+					$("#weic").slideToggle("slow");
+				});
+			});
+		</script>
+		<br />
+		<div class="page">
+			<div class="rexiao">
+				<img id="lunbo" src="img/1.jpg" width="400px" height="300px" style="display: inline-block; border-radius: 5%;float: left;" />
+				<script>
+					function init() {
+						setInterval("changeImg()", 1000);
+					}
+					var i = 1;
+
+					function changeImg() {
+						i++
+						document.getElementById("lunbo").src = "img/" + i + ".jpg";
+						if(i == 5) {
+							i = 0
+						}
+					}
+				</script>
+				<div class="z" style="text-align: center;display: inline-block;width: 400px;height: 300px;float: left;">
+					<p id="z">HOT</p>
+					<p id="z">当前热销</p>
+				</div>
+				<img id="lunbo" src="img/5.jpg" width="400px" height="300px" style="display: inline-block; border-radius: 5%; float: right;" />
+				<script>
+					function init() {
+						setInterval("changeImg()", 1000);
+					}
+					var i = 1;
+
+					function changeImg() {
+						i++
+						document.getElementById("lunbo").src = "img/" + i + ".jpg";
+						if(i == 5) {
+							i = 0
+						}
+					}
+				</script>
+			</div>
+			<a class="ui-btn ui-icon-grid ui-btn-icon-left" href="https://wananjj.github.io/homework10(3)"target="_blank">今日菜品</a>
+			<div class="shop" id="s1">
+				<img src="img/4.jpg" />
+				<br />
+				<a class="neizi">施工中</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">--笔</h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">---</h4>
+					<a><img src="img/QQ图片20191114201900.png" height="39px" style="float: right;" /></a>
+				</div>
+			</div>
+			<div class="shop" id="s2">
+				<img src="img/4.jpg" />
+				<br />
+				<a class="neizi">施工中</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">--笔</h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">---</h4>
+					<a><img src="img/QQ图片20191114201900.png" height="39px" style="float: right;" /></a>
+				</div>
+			</div>
+			<div class="shop" id="s3">
+				<img src="img/4.jpg" />
+				<br />
+				<a class="neizi">施工中</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">--笔</h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">---</h4>
+					<a><img src="img/QQ图片20191114201900.png" height="39px" style="float: right;" /></a>
+				</div>
+			</div>
+			<div class="shop" id="s4">
+				<img src="img/4.jpg" />
+				<br />
+				<a class="neizi">施工中</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">--笔</h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">---</h4>
+					<a><img src="img/QQ图片20191114201900.png" height="39px" style="float: right;" /></a>
+				</div>
+			</div>
+			<div class="shop" id="s5">
+				<img src="img/4.jpg" />
+				<br />
+				<a class="neizi">施工中</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">--笔</h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">---</h4>
+					<a><img src="img/QQ图片20191114201900.png" height="39px" style="float: right;" /></a>
+				</div>
+			</div>
+			<div class="shop" id="s6">
+				<img src="img/4.jpg" />
+				<br />
+				<a class="neizi">施工中</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">--笔</h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">---</h4>
+					<a><img src="img/QQ图片20191114201900.png" height="39px" style="float: right;" /></a>
+				</div>
+			</div>
+			<div class="shop" id="s7">
+				<img src="img/4.jpg" />
+				<br />
+				<a class="neizi">施工中</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">--笔</h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">---</h4>
+					<a><img src="img/QQ图片20191114201900.png" height="39px" style="float: right;" /></a>
+				</div>
+			</div>
+			<div class="shop" id="s8">
+				<img src="img/4.jpg" />
+				<br />
+				<a class="neizi">施工中</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">--笔</h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">---</h4>
+					<a><img src="img/QQ图片20191114201900.png" height="39px" style="float: right;" /></a>
+				</div>
+			</div>
+			<div class="shop" id="s9">
+				<img src="img/4.jpg" />
+				<br />
+				<a class="neizi">施工中</a>
+				<div class="xiaoshou">
+					<h4>月成交量</h4>
+					<h4 id="shuzi">--笔</h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<h4>评价</h4>
+					<h4 id="shuzi1">---</h4>
+					<a><img src="img/QQ图片20191114201900.png" height="39px" style="float: right;" /></a>
+				</div>
+			</div>
+			<a href="#tou1" class="ui-btn ui-icon-back ui-btn-icon-left" style="width: 40px; float: right;">返回</a>
+		</div>
+	</body>
+
+</html>

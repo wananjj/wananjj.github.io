@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>共享厨房</title>
+	</head>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+		#yajin {
+			color: black;
+			font-weight: 300;
+			transition: all 1s;
+			width: 100px;
+		}
+		
+		#yajin:hover {
+			color: red;
+			border: 1px solid red;
+		}
+		
+		.zi {
+			width: auto;
+			height: 30px;
+			position: absolute;
+			transform: translate(1600px, 30px);
+		}
+		
+		#z {
+			margin-right: 30px;
+			color: #8E8E8E;
+			font-weight: 300;
+			text-decoration: none;
+		}
+		
+		#z:hover {
+			color: red;
+		}
+		
+		#z1 {
+			position: relative;
+			transform: translateY(-15px);
+			font-size: large;
+			animation: dong 2s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		
+		@keyframes dong {
+			10% {
+				color: #FF0000;
+			}
+			20% {
+				color: palevioletred;
+			}
+			30% {
+				color: blueviolet;
+			}
+			40% {
+				color: #4B0091;
+			}
+			50% {
+				color: #4A4AFF;
+			}
+			60% {
+				color: #0066CC;
+			}
+			70% {
+				color: #CAFFFF;
+			}
+			80% {
+				color: #F0F0F0;
+			}
+			90% {
+				color: #FFEEDD;
+			}
+			100% {
+				color: #C7C7E2;
+			}
+		}
+		
+		.tu {
+			transition: border-color 1s;
+			margin: 10px 10px 10px 10px;
+			border: 2px solid white;
+		}
+		
+		.tu:hover {
+			border: 2px solid red;
+		}
+		
+		.jieshao {
+			width: auto;
+			height: 50px;
+		}
+		
+		h6 {
+			color: #0066CC;
+			margin: 0;
+		}
+		
+		p {
+			display: inline-block;
+		}
+		
+		#xiaoliang {
+			font-weight: 600;
+			color: #0066CC;
+		}
+		
+		#pingjia {
+			font-weight: 600;
+			color: saddlebrown;
+		}
+	</style>
+
+	<body>
+		<div data-role="header" style="height: 60px;">
+			<img src="img/图标3.png" style="float: left; margin-right: 30px;" />
+			<div data-role="collapsible" style="width: 200px; height: auto; display: inline-block; float: left;">
+				<h1>支付选择</h1>
+				<div data-role="collapsible" style="width: 150px; height: auto;">
+					<h1>押金</h1>
+					<a id="yajin" href="#">200/次</a>
+					<br />
+					<a id="yajin" href="#">500永久</a>
+				</div>
+				<a class="ui-btn ui-icon-grid ui-btn-icon-left">银行卡绑定</a>
+			</div>
+			<div data-role="collapsible" style="display:  inline-block; float: left;">
+				<h1>扫描二维码</h1>
+				<img src="img/QQ图片20191201204503.png" style="width: 150px; height: auto;" />
+			</div>
+
+			<div class="zi">
+				<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&redirect_uri=http%3A%2F%2Fspcdp.cdposs.qq.com%2Fauth%2Fcallback&client_id=101477813&state=http%3A%2F%2Fspcdp.cdposs.qq.com%2F" id="z">请登录</a>
+				<a href="https://ssl.zc.qq.com/v3/index-chs.html" id="z">免费注册</a>
+				<a href="" id="z">关于我们</a>
+			</div>
+		</div>
+
+		<div data-role="main" class="ui-content" style="width: 1000px;height: auto; position: absolute;transform: translateX(480px);">
+			<script>
+				$(document).ready(function() {
+					$("button").click(function() {
+						$("#div1").fadeIn(1500);
+						$("#div2").fadeIn(2000);
+						$("#div3").fadeIn(2500);
+						$("#div4").fadeIn(3000);
+						$("#div5").fadeIn(3500);
+						$("#div6").fadeIn(4000);
+						$("#div7").fadeIn(4500);
+						$("#div8").fadeIn(5000);
+						$("#div9").fadeIn(5500);
+						$("#div10").fadeIn(6000);
+						$("#div11").fadeIn(6500);
+						$("#div12").fadeIn(7000);
+					});
+				});
+			</script>
+			<button style="height: 60px;"><marquee><h4 id="z1">今日菜品</h4></marquee></button>
+			<div id="div1" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div2" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div3" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div4" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div5" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div6" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div7" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div8" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div9" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div10" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div11" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<div id="div12" style="width:200px;height:200px;display:none;float: left;" class="tu">
+				<img src="img/cai.png" width="200px" />
+				<div class="jeishao">
+					<h6>施工中</h6>
+					<p id="xiaoliang">月销量</p>
+					<p>---</p>
+					&nbsp;&nbsp;
+					<p id="pingjia">评价</p>
+					<p>---</p>
+					&nbsp;&nbsp;&nbsp;
+					<img src="img/图标5.png" width="20px" height="20px" />
+				</div>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱1</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱2</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱3</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱4</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱5</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱6</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱7</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱8</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱9</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">菜谱10</a>
+			<div data-role="popup" id="myPopup" class="ui-content">
+			<img src="img/菜谱.png"  width="500px" height="300px"/>
+			</div>
+			<a class="ui-btn ui-icon-search ui-btn-icon-left" href="https://wananjj.github.io/homework10(1)" style="width: 60px;">搜索更多</a>
+
+	</body>
+
+</html>
